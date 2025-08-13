@@ -5,23 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>@yield('title', 'Admin - MyLittleCompany')</title>
-    <!-- Bootstrap CDN si besoin -->
-    <style>
-        body { background: #f8f9fa; }
-        .admin-nav { background: #343a40; color: #fff; }
-    </style>
 </head>
 <body>
-    <nav class="admin-nav p-3 mb-4">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
         <div class="container">
-            <span>Backend - MyLittleCompany</span>
-            <!-- Lien retour front -->
-            <a href="{{ route('home') }}" class="btn btn-light btn-sm float-end">Retour site</a>
-            <a href="{{ route('mail') }}">Boîte de réception</a>
+            <a class="navbar-brand" href="{{ route('employe') }}">Backend</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#adminNavbar" aria-controls="adminNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="adminNavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('employe') }}">Employés</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('produit') }}">Produits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('mail') }}">Messages</a>
+                    </li>
+                </ul>
+                <a href="{{ route('home') }}" class="btn btn-light btn-sm">Retour au site</a>
+            </div>
         </div>
     </nav>
     <div class="container">
         @yield('content')
     </div>
 </body>
-</html>

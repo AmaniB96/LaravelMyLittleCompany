@@ -16,7 +16,7 @@ Les pages (10 en tout)
 -> Home: présentation de l'entreprise avec un carrousel, les service et produits, faite 3 sections en plus du carrousel.
 -> Contactez nous, une image de la boite avec un formulaire pour remplir la table message. (a l'envois stock dans messages)
 -> Notre équipe, une page avec des cards qui présente l'équipe (nom, prénom, poste, img)
--> Nos produit, une page qui affiche les produits comme une boutique: img, titre, descriptif, prix. (pas de bouton d'achat)
+-> 
 
 // BACK
 -> Un lien ou bouton discret vers une page backend (dans la nav ou ailleurs).
