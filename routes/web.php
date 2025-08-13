@@ -12,4 +12,6 @@ Route::get('/contact', [GlobalController::class, 'contact'])->name('contact');
 Route::post('/store', [GlobalController::class, 'store'])->name('store');
 
 Route::get('/employe', [GlobalController::class, 'employe'])->name('employe');
-route::post('/storeEmploye', [GlobalController::class, 'storeEmploye'])->name('storeEmploye');
+Route::get('/employe/create', [GlobalController::class, 'createEmploye'])->name('employe.create');
+Route::post('/storeEmploye', [GlobalController::class, 'storeEmploye'])->name('storeEmploye');
+Route::delete('/employe/{employe}', [GlobalController::class, 'destroyEmploye'])->name('employe.destroy');

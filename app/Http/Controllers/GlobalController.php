@@ -36,6 +36,11 @@ class GlobalController extends Controller
         return view('back.employe', compact('employes'));
     }
 
+      public function createEmploye()
+    {
+        return view('back.employe_create');
+    }
+
     public function storeEmploye(Request $request) {
         $employe = new Employe();
         $employe->nom = $request->nom;
@@ -48,5 +53,10 @@ class GlobalController extends Controller
 
         $employe->save();
         return redirect()->route('employe');
+    }
+
+    public function destroyEmploye(Employe $employe) {
+        $employe->delete();
+        return redirect()->route('employe')->with('success', 'Employé viré.');
     }
 }
