@@ -59,4 +59,16 @@ class GlobalController extends Controller
         $employe->delete();
         return redirect()->route('employe')->with('success', 'Employé viré.');
     }
+
+    public function mail()
+    {
+        $messages = Message::all();
+        return view('back.mail', compact('messages'));
+    }
+
+    public function mailDestroy(Message $message)
+    {
+        $message->delete();
+        return redirect()->route('mail');
+    }
 }

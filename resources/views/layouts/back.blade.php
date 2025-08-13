@@ -17,6 +17,7 @@
             <span>Backend - MyLittleCompany</span>
             <!-- Lien retour front -->
             <a href="{{ route('home') }}" class="btn btn-light btn-sm float-end">Retour site</a>
+            <a href="{{ route('mail') }}">Boîte de réception</a>
         </div>
     </nav>
     <div class="container">
