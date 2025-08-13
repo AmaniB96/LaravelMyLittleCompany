@@ -8,6 +8,13 @@
     <title>Home</title>
 </head>
 <body>
+    <style>
+.carousel-item img {
+  height: 600px; /* ou la hauteur souhaitée */
+  width: 100%;
+  object-fit: cover;
+}
+</style>
     <!-- Carrousel Bootstrap -->
         <div id="carouselExample" class="carousel slide mb-5">
         <div class="carousel-inner">
@@ -43,26 +50,85 @@
 
         <!-- Section Services -->
         <section class="mb-5">
-        <div class="container">
-            <h2 class="mb-3">Nos Services</h2>
-            <p>Présentation des services proposés par l’entreprise.</p>
-        </div>
+            <div class="container">
+                <h2 class="mb-3">Nos Services</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Développement Web</h5>
+                                <p class="card-text">Création de sites web sur mesure, applications web et plateformes e-commerce performantes et sécurisées.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Solutions Cloud</h5>
+                                <p class="card-text">Migration, gestion et optimisation de vos infrastructures sur le cloud pour plus de flexibilité et de sécurité.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Cybersécurité</h5>
+                                <p class="card-text">Audit, conseil et mise en place de solutions pour protéger vos données et vos systèmes informatiques.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Section Produits -->
         <section class="mb-5">
-        <div class="container">
-            <h2 class="mb-3">Nos Produits</h2>
-            <p>Présentation rapide des produits phares.</p>
-        </div>
+            <div class="container">
+                <h2 class="mb-3">Nos Produits</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">MyCloudApp</h5>
+                                <p class="card-text">Application SaaS pour la gestion collaborative de projets et de documents en ligne.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">SecureBox</h5>
+                                <p class="card-text">Solution de stockage et partage de fichiers sécurisés pour entreprises et indépendants.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">WebShop360</h5>
+                                <p class="card-text">Plateforme e-commerce clé en main, personnalisable et évolutive pour tous types de business.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Section À propos -->
         <section>
-        <div class="container">
-            <h2 class="mb-3">À propos de nous</h2>
-            <p>Valeurs, mission, histoire de l’entreprise.</p>
-        </div>
+            <div class="container">
+                <h2 class="mb-3">À propos de nous</h2>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>MyLittleCompany est une entreprise fictive spécialisée dans les solutions numériques innovantes pour les professionnels. Notre mission : accompagner la transformation digitale des entreprises grâce à des services sur mesure et des produits performants.</p>
+                        <ul>
+                            <li><strong>Innovation</strong> : Nous développons des outils à la pointe de la technologie.</li>
+                            <li><strong>Proximité</strong> : Un accompagnement personnalisé pour chaque client.</li>
+                            <li><strong>Sécurité</strong> : La protection des données est au cœur de nos préoccupations.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </section>
 </body>
 </html>
