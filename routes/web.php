@@ -23,3 +23,6 @@ Route::get('/produit', [GlobalController::class, 'produit'])->name('produit');
 Route::get('/produit/create', [GlobalController::class, 'produitCreate'])->name('produit.create');
 Route::post('/produit', [GlobalController::class, 'produitStore'])->name('produit.store');
 Route::delete('/produit/{produit}', [GlobalController::class, 'produitDestroy'])->name('produit.destroy');
+
+Route::get('/team', [GlobalController::class, 'team'])->name('team');
+Route::get('/product', [GlobalController::class, 'produitsFront'])->name('produits.front');

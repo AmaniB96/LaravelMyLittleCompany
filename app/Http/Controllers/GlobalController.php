@@ -105,5 +105,15 @@ class GlobalController extends Controller
         return redirect()->route('produit');
     }
 
+    public function team()
+{
+    $employes = Employe::all();
+    return view('front.team', compact('employes'));
+}
 
+public function produitsFront()
+    {
+        $produits = Produit::all();
+        return view('front.product', compact('produits'));
+    }
 }
