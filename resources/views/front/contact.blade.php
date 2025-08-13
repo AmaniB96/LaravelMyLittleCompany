@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <title>Document</title>
-</head>
-<body>
+@extends('layouts.front')
+
+@section('title', 'Contactez-nous')
+
+@section('content')
     <form action={{ route('store') }} method='POST'>
         @csrf
         <label for="nom">Nom:</label>
@@ -25,5 +20,4 @@
         
         <input type="submit" value="Envoyer">
     </form>
-</body>
-</html>
+@endsection

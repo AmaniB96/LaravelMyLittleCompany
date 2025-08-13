@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nom');
             $table->string('prenom');
             $table->unsignedInteger('tel');
-            $table->string('email')->unique();
+            $table->string('mail')->unique();
             $table->enum('poste', ['Logistique', 'Réception', 'Comptabilité', 'Vente', 'Direction']);
             $table->enum('role', ['Ouvrier polyvalent', 'employé polyvalent', 'Comptable', 'Assistant du régional manager', 'Régional manager']);
             $table->float('salaire');
