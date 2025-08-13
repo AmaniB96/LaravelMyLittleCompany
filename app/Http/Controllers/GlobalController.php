@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Message;
 use App\Models\Employe;
+use App\Models\Produit;
+
 
 class GlobalController extends Controller
 {
@@ -71,4 +73,37 @@ class GlobalController extends Controller
         $message->delete();
         return redirect()->route('mail');
     }
+
+    public function produit()
+    {
+        $produits = Produit::all();
+        return view('back.produit', compact('produits'));
+    }
+
+    public function produitCreate()
+    {
+        return view('back.produit_create');
+    }
+
+    public function produitStore(Request $request)
+    {
+        $produit = new Produit();
+        $produit->nom = $request->nom;
+        $produit->type = $request->type;
+        $produit->descriptif = $request->descriptif;
+        $produit->image = $request->image;
+        $produit->prix = $request->prix;
+        
+        $produit->save();
+
+        return redirect()->route('produit');
+    }
+
+    public function produitDestroy(Produit $produit)
+    {
+        $produit->delete();
+        return redirect()->route('produit');
+    }
+
+
 }

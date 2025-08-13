@@ -18,3 +18,8 @@ Route::delete('/employe/{employe}', [GlobalController::class, 'destroyEmploye'])
 
 Route::get('/mail', [GlobalController::class, 'mail'])->name('mail');
 Route::delete('/mail/{message}', [GlobalController::class, 'mailDestroy'])->name('mail.destroy');
+
+Route::get('/produit', [GlobalController::class, 'produit'])->name('produit');
+Route::get('/produit/create', [GlobalController::class, 'produitCreate'])->name('produit.create');
+Route::post('/produit', [GlobalController::class, 'produitStore'])->name('produit.store');
+Route::delete('/produit/{produit}', [GlobalController::class, 'produitDestroy'])->name('produit.destroy');
