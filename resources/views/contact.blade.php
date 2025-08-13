@@ -9,6 +9,7 @@
 </head>
 <body>
     <form action="">
+        @csrf
         <label for=""></label>
         <input type="text">
     </form>
