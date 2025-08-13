@@ -8,3 +8,5 @@ Route::get('/', function () {
 });
 
 Route::get('/home', [GlobalController::class, 'home'])->name('home');
+Route::get('/contact', [GlobalController::class, 'contact'])->name('contact');
+Route::post('/store', [GlobalController::class, 'store'])->name('store');
